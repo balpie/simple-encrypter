@@ -12,21 +12,17 @@ int main(int argc, char** argv)
         exit(-1);
     }
     int opt, mode;
-
-    opt = getopt(argc, argv, "de");
-    switch (opt)
+    while((mode = getopt(argc, argv, "de"))!= -1)
     {
-        case 'd':
-            mode = DECRYPT;
-            break;
-        case 'e':
-            mode = ENCRYPT;
-            break;
-        default:
-            printf("wrong mode argument\n");
-            exit(-1);
+        switch (opt)
+        {
+        case 'd': mode = DECRYPT; break;
+        case 'e': mode = ENCRYPT; break;
+       // default:
+       //     printf("wrong argument usage\n");
+       //     exit(-1);
+        }
     }
-
 
     if(mode == ENCRYPT) 
     {
@@ -51,8 +47,6 @@ int main(int argc, char** argv)
 
         unsigned long dimFile;
         buff = readFileContent(filesToEncript[i], &dimFile);
-
-        printf("dimensione %s: %ld\n", filesToEncript[i], dimFile);
 
         sumBasedEncription(buff, dimFile, key, mode);
 

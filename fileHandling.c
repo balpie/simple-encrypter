@@ -15,6 +15,11 @@ char* readFileContent(char* fileName, unsigned long *dim)
     fseek(readfp, 0, SEEK_END);
     dimFile = ftell(readfp);
     fseek(readfp, 0, SEEK_SET);
+
+    //printf("##################") ;
+    //printf("Posizione Iniziale File: %ld", ftell(readfp));
+    //printf("##################") ;
+
     char* buffer = (char*)malloc(dimFile);
 
     fread(buffer, 1, dimFile, readfp);
@@ -32,13 +37,10 @@ int writeFileContent(char* fileName, char* buffer, unsigned long len)
     }
     FILE *writefp = fopen(fileName, "wb");
 
-    /*
-    if(writefp == NULL)
+    if(writefp != NULL)
     {
-        printf("%s non esiste\n", fileName);
-        return 0;
+        fseek(writefp,0,SEEK_SET);
     }
-    */
 
     fwrite(buffer, 1, len, writefp);
     fclose(writefp);

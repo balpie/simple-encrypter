@@ -3,7 +3,7 @@
 
 void sumBasedEncription(char* buff, unsigned long lenght, int key, int enc)
 {
-    if(enc == DECRYPT)
+    if(!enc)
     {
         key = -key;
     }
