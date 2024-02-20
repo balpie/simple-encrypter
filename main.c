@@ -54,7 +54,7 @@ int main(int argc, char** argv)
 
         printf("dimensione %s: %ld\n", filesToEncript[i], dimFile);
 
-        sumBasedEncription(buff, dimFile, key, mode);
+        sumBasedEncryption(buff, dimFile, key, mode);
 
         writeFileContent(filesToEncript[i], buff, dimFile);
 

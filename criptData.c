@@ -1,7 +1,7 @@
 #include "criptData.h"
 
 
-void sumBasedEncription(char* buff, unsigned long lenght, int key, int enc)
+void sumBasedEncryption(char* buff, unsigned long lenght, int key, int enc)
 {
     if(!enc)
     {

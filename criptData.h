@@ -4,6 +4,6 @@
 #define ENCRYPT 1
 #define DECRYPT 0
 
-void sumBasedEncription(char* buff, unsigned long lenght, int key, int enc);
+void sumBasedEncryption(char* buff, unsigned long lenght, int key, int enc);
 
 #endif
