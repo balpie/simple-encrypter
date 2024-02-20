@@ -1,6 +1,9 @@
+*.gch
 *.d
 *.jpg
 *.jpeg
 *.png
+test*
 enc
 dec
+

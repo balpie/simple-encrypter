@@ -1,7 +1,3 @@
-all:	encript decript
-
-encript: enc
-	g++ -o enc enc.cpp
-decript: dec
-	g++ -o dec dec.cpp
-
+target:
+ 
+	g++ -o simple-enc main.c fileHandling.c argsHandling.c criptData.c
