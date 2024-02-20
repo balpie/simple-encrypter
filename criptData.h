@@ -1,8 +1,8 @@
 #ifndef ARGSHANDLING
 #define ARGSHANDLING
 
-#define ENCRIPT 1
-#define DECRIPT 0
+#define ENCRYPT 1
+#define DECRYPT 0
 
 void sumBasedEncription(char* buff, unsigned long lenght, int key, int enc);
 

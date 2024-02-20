@@ -46,17 +46,26 @@ int strToNumber(char* str)
     return result;
 }
 
-char* generateNewName(const char* str)
+char* generateNewName(const char* str, int mode)
 {
-    char* newName = (char*)malloc(strlen(str) + 3);
-    strcpy(newName, str);
+    char* newName;
+    if (mode == ENCRYPT)
+    {
+        newName = (char*)malloc(strlen(str) + 3);
+        strcpy(newName, str);
 
-    newName[strlen(str)] = '.';
-    newName[strlen(str)+1] = 'd';
-    newName[strlen(str)+2] = '\0';
-
+        newName[strlen(str)] = '.';
+        newName[strlen(str)+1] = 'd';
+        newName[strlen(str)+2] = '\0';
+    }
+    else
+    {
+        newName = (char*)malloc(strlen(str));
+        strcpy(newName, str);
+    }
     return newName;
 }
+
 char** getFileNames(long unsigned *numF)
 {
     int effective = 0;

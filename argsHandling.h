@@ -6,9 +6,11 @@
 #include <string.h>
 #include <stdio.h>
 #define MAX_FILENAME_LENGHT 30
+#define ENCRYPT 1
+#define DECRYPT 0
 
 int strToNumber(char* str);
-char* generateNewName(const char* str);
+char* generateNewName(const char* str, int mode);
 char** getFileNames(long unsigned *numF);
 
 #endif
