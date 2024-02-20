@@ -3,6 +3,7 @@
 *.jpg
 *.jpeg
 *.png
+.idea
 test*
 enc
 dec
