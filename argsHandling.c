@@ -46,7 +46,7 @@ int strToNumber(char* str)
     return result;
 }
 
-char* generateNewName(const char* str, int mode)
+char* generateNewName(const char* str, int mode) //DEPRECATED
 {
     char* newName;
     if (mode == ENCRYPT)
@@ -62,6 +62,7 @@ char* generateNewName(const char* str, int mode)
     {
         newName = (char*)malloc(strlen(str));
         strcpy(newName, str);
+        newName[strlen(newName)] = '\0';
     }
     return newName;
 }

@@ -32,11 +32,13 @@ int writeFileContent(char* fileName, char* buffer, unsigned long len)
     }
     FILE *writefp = fopen(fileName, "wb");
 
+    /*
     if(writefp == NULL)
     {
         printf("%s non esiste\n", fileName);
         return 0;
     }
+    */
 
     fwrite(buffer, 1, len, writefp);
     fclose(writefp);

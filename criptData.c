@@ -9,6 +9,6 @@ void sumBasedEncription(char* buff, unsigned long lenght, int key, int enc)
     }
     for(unsigned long i = 0; i < lenght; i++)
     {
-        buff[i] = (buff[i] + key) % 256;
+        buff[i] = (char)(((int)buff[i] + key) % 256);
     }
 }

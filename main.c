@@ -24,7 +24,17 @@ int main(int argc, char** argv)
         }
     }
 
-    unsigned long key, numFiles;
+    if(mode == ENCRYPT) 
+    {
+        printf("Modalità: Encrypting\n");
+    }
+    else
+    {
+        printf("Modalità: Decrypting\n");
+    }
+
+    unsigned long numFiles;
+    int key;
     numFiles = strToNumber(argv[2]);
     key = strToNumber(argv[3]);
 
@@ -33,18 +43,17 @@ int main(int argc, char** argv)
     for(int i = 0; i < numFiles; i++)
     {
         char* buff;
-        char* newName = generateNewName(filesToEncript[i], mode);
-        printf("nuovo nome per %s: %s\n", filesToEncript[i], newName);
+        //char* newName = generateNewName(filesToEncript[i], mode); DEPRECATED
 
         unsigned long dimFile;
         buff = readFileContent(filesToEncript[i], &dimFile);
 
         sumBasedEncription(buff, dimFile, key, mode);
 
-        writeFileContent(newName, buff, dimFile);
+        writeFileContent(filesToEncript[i], buff, dimFile);
 
         free(buff);
-        free(newName);
+        //free(newName);
     }
 
     for(int i = 0; i < numFiles; i++)
