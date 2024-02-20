@@ -11,9 +11,10 @@ int main(int argc, char** argv)
         printf("simple-enc -d | -e numfiles [key]\n");
         exit(-1);
     }
+
     int opt, mode;
 
-    opt = getopt(argc, argv, "de");
+    opt = getopt(argc, argv, "de"); 
     switch (opt)
     {
         case 'd':
@@ -41,6 +42,11 @@ int main(int argc, char** argv)
     int key;
     numFiles = strToNumber(argv[2]);
     key = strToNumber(argv[3]);
+    if(key <= 0 || key > 255)
+    {
+        printf("chiave non valida\n");
+        exit(-1);
+    }
 
     char **filesToEncript = getFileNames(&numFiles);
 
