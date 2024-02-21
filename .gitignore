@@ -9,4 +9,4 @@ test*
 enc
 dec
 simple-enc
-
+cmake-build-debug

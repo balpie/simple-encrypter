@@ -4,21 +4,26 @@ project(encripting C)
 set(CMAKE_C_STANDARD 11)
 
 set(SOURCE_FILES
-        main.cpp
+        main.c
         criptData.c
         argsHandling.c
         fileHandling.c
         )
 
+set(HEADER_FILES
+        argsHandling.h
+        criptData.h
+        fileHandling.h)
+
 # Specify the executable and its source files
-add_executable(simple-enc ${SOURCE_FILES})
+add_executable(simple-enc ${SOURCE_FILES} ${HEADER_FILES})
 
 # Add debug flags
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g")
 
 # If you want to include additional flags for debugging, you can customize them
 # For example, include debugging symbols and enable optimization
- set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0")
+ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -O0")
 
 # Specify any additional libraries or dependencies if needed
 # target_link_libraries(YourExecutableName YourAdditionalLibraries)
