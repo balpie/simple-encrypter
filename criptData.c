@@ -1,23 +1,13 @@
 #include "criptData.h"
 
-char rotateLeft(char c)
+char rotateLeft(char c, int d)
 {
-    char res = c<<1;
-    if(c & MSB_1BYTE)
-    {
-        res = res | LSB_1BYTE;
-    }
-    return res;
+    return (c<<d) | c >>(NUM_BITS - d);
 }
 
-char rotateRight(char c)
+char rotateRight(char c, int d)
 {
-    char res = c>>1;
-    if(c & LSB_1BYTE)
-    {
-        res = res | MSB_1BYTE;
-    }
-    return res;
+    return (c>>d) | c <<(NUM_BITS - d);
 }
 
 

@@ -25,11 +25,10 @@ int main(int argc, char** argv)
             break;
         default:
             printf("wrong mode argument\n");
-            exit(-1);
+            return(-1);
     }
 
-
-    if(mode == ENCRYPT) 
+    if(mode == ENCRYPT)
     {
         printf("Modalità: Encrypting\n");
     }
@@ -53,10 +52,12 @@ int main(int argc, char** argv)
     for(int i = 0; i < numFiles; i++)
     {
         char* buff;
-        //char* newName = generateNewName(filesToEncript[i], mode); DEPRECATED
 
         unsigned long dimFile;
-        buff = readFileContent(filesToEncript[i], &dimFile);
+        if (!(buff = readFileContent(filesToEncript[i], &dimFile)))
+        {
+            continue; // file non esistente
+        }
 
         printf("dimensione %s: %ld\n", filesToEncript[i], dimFile);
 
