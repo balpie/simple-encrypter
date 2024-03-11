@@ -1,16 +1,5 @@
 #include "criptData.h"
 
-char rotateLeft(char c, int d)
-{
-    return (c<<d) | c >>(NUM_BITS - d);
-}
-
-char rotateRight(char c, int d)
-{
-    return (c>>d) | c <<(NUM_BITS - d);
-}
-
-
 void sumBasedEncryption(char* buff, unsigned long lenght, int key, int enc)
 {
     if(!enc)
@@ -22,3 +11,4 @@ void sumBasedEncryption(char* buff, unsigned long lenght, int key, int enc)
         buff[i] = (char)(((int)buff[i] + key) % 256);
     }
 }
+
