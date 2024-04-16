@@ -1,4 +1,4 @@
-#include "criptData.h"
+#include "include.h"
 
 void sumBasedEncryption(char* buff, unsigned long lenght, int key, int enc)
 {

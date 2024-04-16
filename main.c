@@ -1,6 +1,4 @@
-#include "argsHandling.h"
-#include "fileHandling.h"
-#include "criptData.h"
+#include "include.h"
 #include <unistd.h>
 
 int main(int argc, char** argv)

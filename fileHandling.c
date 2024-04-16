@@ -1,4 +1,4 @@
-#include "fileHandling.h"
+#include "include.h"
 
 char* readFileContent(char* fileName, unsigned long *dim)
 {

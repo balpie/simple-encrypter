@@ -1,5 +1,4 @@
-#include "argsHandling.h"
-#include <string.h>
+#include "include.h"
 
 
 int getStrStdin(char* str)
