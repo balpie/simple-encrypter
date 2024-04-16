@@ -1,3 +1,3 @@
 all:
  
-	g++ -o simple-enc main.c fileHandling.c argsHandling.c criptData.c
+	g++ -g -o simple-enc main.c fileHandling.c argsHandling.c criptData.c
