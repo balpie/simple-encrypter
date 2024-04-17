@@ -25,7 +25,7 @@ int main(int argc, char** argv)
             printf("wrong mode argument\n");
             return(-1);
     }
-
+    /* //TODO aggiungi argomento -v per scrivere modalità e stringa criptata e non
     if(mode == ENCRYPT)
     {
         printf("Modalità: Encrypting\n");
@@ -34,6 +34,7 @@ int main(int argc, char** argv)
     {
         printf("Modalità: Decrypting\n");
     }
+    */
 
     unsigned long numFiles;
     int key;
