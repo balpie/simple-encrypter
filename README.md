@@ -3,7 +3,7 @@ simple file encripter written in c.
 
 ## Usage
 - compile with `make`
-- `./simple-enc -d|-e numFiles key`  
+- `./simple-enc -d|-e key numFiles `  
     where key should be a number between 1 and 255
 
 ## Todo
