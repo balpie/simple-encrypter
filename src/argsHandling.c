@@ -1,18 +1,4 @@
-#include "include.h"
-
-
-int getStrStdin(char* str)
-{
-    fgets(str, MAX_FILENAME_LENGHT, stdin);
-
-    if(ferror(stdin) || str == NULL)
-    {
-        free(str);
-        return 0; //nome file troppo lungo
-    }
-    str[strcspn(str, "\n")] = '\0';
-    return 1;
-}
+#include "../include/include.h"
 
 int power(int base, int exp)
 {
@@ -23,6 +9,19 @@ int power(int base, int exp)
         res *= base;
     }
     return res;
+}
+
+int getStrStdin(char* str)
+{
+    fgets(str, MAX_STR_LENGTH, stdin);
+
+    if(ferror(stdin) || str == NULL)
+    {
+        free(str);
+        return 0; //nome file troppo lungo
+    }
+    str[strcspn(str, "\n")] = '\0';
+    return 1;
 }
 
 int strToNumber(char* str)

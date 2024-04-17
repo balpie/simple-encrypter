@@ -1,4 +1,4 @@
-#include "include.h"
+#include "../include/include.h"
 
 char* readFileContent(char* fileName, unsigned long *dim)
 {

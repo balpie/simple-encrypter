@@ -1,13 +1,31 @@
+# File temporanei di Vim
 .*.swp
+
+# File di intestazione precompilata
 *.gch
+
+# File di dipendenze generati dal compilatore
 *.d
+
+# Immagini
 *.jpg
 *.jpeg
 *.png
+
+# Directory specifica di un IDE (potrebbe variare in base all'IDE utilizzato)
 .idea
+
+# File di test (potrebbe variare a seconda del nome)
 test*
+
+# Eseguibile di default generato dal compilatore
 a.out
+
+# Eseguibili specifici del progetto
 enc
 dec
 simple-enc
+
+# Directory specifica di un altro IDE (potrebbe variare in base all'IDE utilizzato)
 cmake-build-debug
+
