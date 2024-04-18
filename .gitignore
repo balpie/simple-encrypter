@@ -25,6 +25,7 @@ a.out
 enc
 dec
 simple-enc
+*.o
 
 # Directory specifica di un altro IDE (potrebbe variare in base all'IDE utilizzato)
 cmake-build-debug
