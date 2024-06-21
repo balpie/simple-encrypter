@@ -51,9 +51,10 @@ void sumBasedEncryption(char* buff, unsigned long length,
 char* readFileContent(char* fileName, long unsigned *dim);
 
 /**@brief sovrascrive il contenuto di file con ciò che è contenuto in buffer
- * @param nome del file
+ * @param fileName nome del file
  * @param buffer contenente i byte da scrivere
- * @return dimensione del buffer
+ * @param len dimensionedel buffer
+ * @return 1 se il file esiste, 0 altrimenti
  */
 int writeFileContent(char* fileName, char *buffer, long unsigned len);
 
