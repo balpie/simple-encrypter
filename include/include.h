@@ -43,9 +43,18 @@ void sumBasedEncryption(char* buff, unsigned long length,
                         int key, int enc);
 
 //fileHandling
-/**@brief
+/**@brief scrive il contenuto del file in un buffer
+ * @param nome del file
+ * @param effetto collaterale: dim assumerà la dimensione del file
+ * @return ritorna l'indirizzo del buffer con i byte del file
  */
 char* readFileContent(char* fileName, long unsigned *dim);
+
+/**@brief sovrascrive il contenuto di file con ciò che è contenuto in buffer
+ * @param nome del file
+ * @param buffer contenente i byte da scrivere
+ * @return dimensione del buffer
+ */
 int writeFileContent(char* fileName, char *buffer, long unsigned len);
 
 #endif
