@@ -1,5 +1,5 @@
 # simple-encrypter 
-simple file encripter written in c.  
+simple ASCII cesar cypher file encripter written in c.  
 
 ## Usage
 - compile with `make`
