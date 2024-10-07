@@ -5,7 +5,7 @@ int main(int argc, char** argv)
 {
     if (argc < 3) //almeno modalità e numero file
     {
-        printf("argomenti non sufficienti\n");
+        printf("** unsufficent arguments **\n");
         printf("simple-enc -d | -e key [numfiles]\nif numfiles not specified stdin will be encripted and result will go to stdout\n");
         exit(-1);
     }
