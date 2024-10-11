@@ -38,7 +38,7 @@ int main(int argc, char** argv)
 
     unsigned long numFiles;
     int key;
-    key = strToNumber(argv[2]);
+    key = atoi(argv[2]);
 
     if(key <= 0 || key > 255)
     {
@@ -57,7 +57,7 @@ int main(int argc, char** argv)
     }
     else
     { //caso nomi file da stdin
-        numFiles = strToNumber(argv[3]);
+        numFiles = atoi(argv[3]);
         char **filesToEncript = getFileNames(&numFiles);
         for(int i = 0; i < numFiles; i++)
         {
